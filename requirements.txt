@@ -2,15 +2,22 @@ fastapi
 uvicorn
 python-multipart
 aiohttp
-PyMuPDF==1.24.0  # fitz (PyMuPDF) for PDF processing
-python-docx==1.1.0  # docx for Word document processing
+PyMuPDF==1.24.0
+python-docx==1.1.0
 pydantic==2.6.1
 pydantic-settings==2.1.0
 python-dotenv==1.0.0
-google-generativeai==0.5.2  # For genai integration
-groq==0.4.0  # For Groq API
+google-generativeai==0.5.2
+groq==0.4.0
 numpy==1.26.4
-faiss-cpu==1.8.0  # For vector indexing (CPU version; use faiss-gpu if GPU is available)
-sentence-transformers==2.7.0  # For sentence embeddings
+faiss-cpu==1.8.0
+
+# CPU-only PyTorch (no CUDA libraries!)
+--index-url https://download.pytorch.org/whl/cpu
+torch==2.1.0
+torchvision==0.16.0
+torchaudio==2.1.0
+
+# Install sentence-transformers AFTER CPU PyTorch
+sentence-transformers==2.7.0
 requests==2.32.3
-statistics==1.0.3.5  # For statistical calculations in testing
