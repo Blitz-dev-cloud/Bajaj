@@ -9,15 +9,9 @@ pydantic-settings==2.1.0
 python-dotenv==1.0.0
 google-generativeai==0.5.2
 groq==0.4.0
+requests==2.32.3
 numpy==1.26.4
 faiss-cpu==1.8.0
 
-# CPU-only PyTorch (no CUDA libraries!)
---index-url https://download.pytorch.org/whl/cpu
-torch==2.1.0
-torchvision==0.16.0
-torchaudio==2.1.0
-
-# Install sentence-transformers AFTER CPU PyTorch
-sentence-transformers==2.7.0
-requests==2.32.3
+# Let sentence-transformers install its own PyTorch (hopefully CPU version)
+sentence-transformers==2.2.2
